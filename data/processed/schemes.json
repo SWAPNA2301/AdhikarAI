@@ -1,0 +1,939 @@
+{
+  "schema_version": "1.0.0",
+  "schemes": [
+    {
+      "scheme_id": "IN-PMSBY",
+      "scheme_name": "Pradhan Mantri Suraksha Bima Yojana",
+      "government_level": "central",
+      "state": "all_india",
+      "category": "accident_insurance",
+      "eligibility_conditions": {
+        "status": "verified",
+        "items": [
+          "Individual participating bank/post-office account holders aged 18–70; one account per person; consent to premium auto-debit."
+        ],
+        "source_ids": [
+          "dfs"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "exclusions": {
+        "status": "verified",
+        "items": [
+          "Institutional accounts excluded. Suicide and hospitalisation expenses are not covered.",
+          "Cover ends at age 70 (nearer birthday), account closure or insufficient balance; duplicate coverage is restricted to one account."
+        ],
+        "source_ids": [
+          "dfs"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "benefits": {
+        "status": "verified",
+        "items": [
+          "Accidental death or specified permanent total disability: INR 200000; specified permanent partial disability: INR 100000.",
+          "Total: irreversible loss of both eyes, use of both hands/feet, or one eye plus use of a hand/foot. Partial: irreversible loss of one eye or use of one hand/foot.",
+          "Annual premium INR 20; renewable June–May cover."
+        ],
+        "source_ids": [
+          "dfs"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "required_documents": {
+        "status": "partial",
+        "items": [
+          "Prescribed enrolment, auto-debit authorisation and consent/declaration forms."
+        ],
+        "source_ids": [
+          "dfs"
+        ],
+        "note": "Additional bank KYC and claim-document requirements: unknown; enrolment checklist only."
+      },
+      "application_process": {
+        "status": "verified",
+        "items": [
+          "Submit prescribed consent to a participating bank/post office and authorise premium auto-debit; delayed enrolment cover starts on debit."
+        ],
+        "source_ids": [
+          "dfs"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "verification_notes": [
+        "Exact scheme commencement date not established from the reviewed FAQ; effective_date is unknown.",
+        "Published entry age and termination wording are both retained; no age-boundary eligibility is inferred."
+      ],
+      "official_source_url": "https://financialservices.gov.in/pmsby",
+      "source_passage": "Premium payable is Rs.20/- per annum per member.",
+      "effective_date": "unknown",
+      "verification_date": "2026-11-14",
+      "sources": [
+        {
+          "source_id": "dfs",
+          "url": "https://financialservices.gov.in/pmsby",
+          "title": "DFS PMSBY FAQ",
+          "sections": "Eligibility; benefits; enrolment; termination; documents; suicide and hospitalisation FAQs",
+          "accessed_on": "2026-11-14"
+        }
+      ]
+    },
+    {
+      "scheme_id": "IN-PMJJBY",
+      "scheme_name": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+      "government_level": "central",
+      "state": "all_india",
+      "category": "life_insurance",
+      "eligibility_conditions": {
+        "status": "verified",
+        "items": [
+          "Individual participating bank/post-office account holders aged 18–50; enrol through one account and consent to auto-debit."
+        ],
+        "source_ids": [
+          "dfs"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "exclusions": {
+        "status": "verified",
+        "items": [
+          "Institutional accounts excluded. Non-accidental deaths within 30 days of first enrolment or rejoining are excluded.",
+          "Cover terminates at age 55 (near birthday), account closure or insufficient funds. Duplicate policies do not multiply coverage."
+        ],
+        "source_ids": [
+          "dfs"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "benefits": {
+        "status": "verified",
+        "items": [
+          "Death cover INR 200000, subject to exclusions; annual renewal premium INR 436.",
+          "First-time entry premium: June–August INR 436; September–November INR 342; December–February INR 228; March–May INR 114.",
+          "Renewable June–May cover; no maturity or surrender benefit."
+        ],
+        "source_ids": [
+          "dfs"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "required_documents": {
+        "status": "partial",
+        "items": [
+          "Prescribed enrolment, auto-debit authorisation and consent/declaration forms."
+        ],
+        "source_ids": [
+          "dfs"
+        ],
+        "note": "Additional bank KYC and claim-document checklist: unknown."
+      },
+      "application_process": {
+        "status": "verified",
+        "items": [
+          "Submit enrolment/consent to a participating bank/post office; authorise appropriate premium debit and annual renewal."
+        ],
+        "source_ids": [
+          "dfs"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "verification_notes": [
+        "Exact commencement date not established from reviewed FAQ; effective_date is unknown.",
+        "Entry age and continuation age are distinct."
+      ],
+      "official_source_url": "https://financialservices.gov.in/pmjjby",
+      "source_passage": "The premium payable is Rs.436/- per annum per subscriber.",
+      "effective_date": "unknown",
+      "verification_date": "2026-11-14",
+      "sources": [
+        {
+          "source_id": "dfs",
+          "url": "https://financialservices.gov.in/pmjjby",
+          "title": "DFS PMJJBY FAQ",
+          "sections": "Benefits; eligibility; enrolment; termination; bank role",
+          "accessed_on": "2026-11-14"
+        }
+      ]
+    },
+    {
+      "scheme_id": "IN-APY",
+      "scheme_name": "Atal Pension Yojana",
+      "government_level": "central",
+      "state": "all_india",
+      "category": "pension",
+      "eligibility_conditions": {
+        "status": "verified",
+        "items": [
+          "Indian citizens with a savings bank/post-office account; entry age 18–40. PFRDA permits joining through the 40th birthday.",
+          "Prescribed contributions continue until age 60."
+        ],
+        "source_ids": [
+          "pfrda"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "exclusions": {
+        "status": "verified",
+        "items": [
+          "For new enrolments from 2022-10-01, anyone who is or has been an income-tax payer at application cannot join.",
+          "Subscribers enrolled by 2022-09-30 may continue despite tax status; becoming a taxpayer after valid enrolment does not disqualify them. Multiple accounts prohibited."
+        ],
+        "source_ids": [
+          "pfrda"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "benefits": {
+        "status": "verified",
+        "items": [
+          "Guaranteed monthly pension of INR 1000, 2000, 3000, 4000 or 5000 from age 60, according to selected contributions.",
+          "After subscriber death, spouse receives the same pension; after both die, nominee receives accumulated pension wealth."
+        ],
+        "source_ids": [
+          "pfrda"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "required_documents": {
+        "status": "partial",
+        "items": [
+          "Savings account and nominee details; Aadhaar details must be supplied in due course if absent at enrolment."
+        ],
+        "source_ids": [
+          "pfrda"
+        ],
+        "note": "Complete provider-specific document checklist: unknown."
+      },
+      "application_process": {
+        "status": "verified",
+        "items": [
+          "Approach the bank/post office holding the savings account.",
+          "Contributions use auto-debit monthly, quarterly or half-yearly."
+        ],
+        "source_ids": [
+          "pfrda",
+          "dfs"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "verification_notes": [
+        "Scheme commencement date: unknown in this record. 2022-10-01 is the tax-rule change date, not scheme commencement.",
+        "Age conflict: DFS says below completed 40; PFRDA explicitly includes the 40th birthday. PFRDA clarification retained; no eligibility engine implemented."
+      ],
+      "official_source_url": "https://pfrda.org.in/hi/w/faqs/atal-pension-yojana",
+      "source_passage": "An individual can open only one APY account.",
+      "effective_date": "unknown",
+      "verification_date": "2026-11-14",
+      "sources": [
+        {
+          "source_id": "pfrda",
+          "url": "https://pfrda.org.in/hi/w/faqs/atal-pension-yojana",
+          "title": "PFRDA APY FAQ",
+          "sections": "Who can subscribe; income-tax rule; benefits; Aadhaar; nomination; 40th birthday",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "dfs",
+          "url": "https://financialservices.gov.in/atal-pension-yojana",
+          "title": "DFS APY FAQ",
+          "sections": "Contribution frequency; age-boundary wording",
+          "accessed_on": "2026-11-14"
+        }
+      ]
+    },
+    {
+      "scheme_id": "IN-PM-SYM",
+      "scheme_name": "Pradhan Mantri Shram Yogi Maandhan",
+      "government_level": "central",
+      "state": "all_india",
+      "category": "pension",
+      "eligibility_conditions": {
+        "status": "verified",
+        "items": [
+          "Unorganised workers aged 18–40 with monthly income at most INR 15000."
+        ],
+        "source_ids": [
+          "pib",
+          "pib-2026"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "exclusions": {
+        "status": "partial",
+        "items": [
+          "EPF/ESIC/NPS coverage and income-tax payers excluded; the PIB explainer also excludes receipt of another government pension."
+        ],
+        "source_ids": [
+          "pib"
+        ],
+        "note": "The 2026 reply specifies government-contributed NPS; treatment of other NPS arrangements is unknown pending clarification."
+      },
+      "benefits": {
+        "status": "verified",
+        "items": [
+          "Contributory pension INR 3000/month after age 60; worker contributes INR 55–200/month by entry age, matched by Government.",
+          "On pensioner death, spouse receives 50% family pension."
+        ],
+        "source_ids": [
+          "pib",
+          "pib-2026"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "required_documents": {
+        "status": "verified",
+        "items": [
+          "Aadhaar card, savings/Jan Dhan account details with IFSC, mobile number."
+        ],
+        "source_ids": [
+          "pib"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "application_process": {
+        "status": "verified",
+        "items": [
+          "Visit a CSC, authenticate Aadhaar, complete registration, pay first contribution in cash, authorise auto-debit and receive the scheme card.",
+          "PIB also lists enrolment through the Maandhan portal."
+        ],
+        "source_ids": [
+          "pib"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "verification_notes": [
+        "Exact commencement day not established; effective_date is unknown.",
+        "Source summaries differ in NPS wording, retained as an unresolved limitation."
+      ],
+      "official_source_url": "https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=153849&lang=2&reg=48",
+      "source_passage": "Age Requirement: 18 to 40 years.",
+      "effective_date": "unknown",
+      "verification_date": "2026-11-14",
+      "sources": [
+        {
+          "source_id": "pib",
+          "url": "https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=153849&lang=2&reg=48",
+          "title": "PIB PM-SYM explainer",
+          "sections": "Key features; eligibility; documents; contributions; enrolment",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "pib-2026",
+          "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2293891&lang=1&reg=48",
+          "title": "PIB PM-SYM parliamentary reply, 3 August 2026",
+          "sections": "Eligibility; pension; contribution range",
+          "accessed_on": "2026-11-14"
+        }
+      ]
+    },
+    {
+      "scheme_id": "IN-PM-KISAN",
+      "scheme_name": "Pradhan Mantri Kisan Samman Nidhi",
+      "government_level": "central",
+      "state": "all_india",
+      "category": "agriculture_income_support",
+      "eligibility_conditions": {
+        "status": "verified",
+        "items": [
+          "Landholding farmer families with cultivable land; area ceiling removed from 2019-06-01, subject to exclusions and State/UT verification.",
+          "Portal flags post-2019-02-01 land acquisitions and duplicate family benefits for physical verification; eKYC is mandatory."
+        ],
+        "source_ids": [
+          "pib",
+          "portal"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "exclusions": {
+        "status": "partial",
+        "items": [
+          "Last-assessment-year income-tax payers, specified professionals and pensioners receiving at least INR 10000/month; pension exclusion exempts MTS/Class IV/Group D employees."
+        ],
+        "source_ids": [
+          "pib"
+        ],
+        "note": "Full exclusion list and land-transfer exceptions: unknown from the opened overview sources. Do not use this summary to decide eligibility."
+      },
+      "benefits": {
+        "status": "verified",
+        "items": [
+          "INR 6000 per family annually through bank transfer in three INR 2000 instalments."
+        ],
+        "source_ids": [
+          "nic",
+          "pib"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "required_documents": {
+        "status": "unknown",
+        "items": [],
+        "source_ids": [],
+        "note": "Complete current document checklist not verified; NIC confirms Aadhaar/account validation but does not provide a complete checklist."
+      },
+      "application_process": {
+        "status": "verified",
+        "items": [
+          "Self-register on the official PM-KISAN portal/app or through a CSC; State/UT authorities verify records and approve beneficiaries."
+        ],
+        "source_ids": [
+          "nic"
+        ],
+        "note": "Verified summary; consult the cited source for full terms."
+      },
+      "verification_notes": [
+        "effective_date is original scheme commencement, not the 2019 expansion date.",
+        "Portal could not be directly fetched; its limited eKYC/verification facts were checked in indexed official text. Other details use opened NIC and PIB pages.",
+        "This partially documented record is not a complete current rulebook."
+      ],
+      "official_source_url": "https://www.nic.gov.in/project/pm-kisan/",
+      "source_passage": "Farmer/CSC registers on PM KISAN portal /mobile app and state validates farmer’s eligibility",
+      "effective_date": "2018-12-01",
+      "verification_date": "2026-11-14",
+      "sources": [
+        {
+          "source_id": "nic",
+          "url": "https://www.nic.gov.in/project/pm-kisan/",
+          "title": "NIC PM-KISAN project",
+          "sections": "Scheme overview; portal features; process flow",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "pib",
+          "url": "https://www.pib.gov.in/newsite/PrintRelease.aspx?lang=2&reg=48&relid=199491",
+          "title": "PIB PM-KISAN first anniversary, 22 February 2020",
+          "sections": "Effective date; expansion; exclusions; registration",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "portal",
+          "url": "https://pmkisan.gov.in/?open_in_new_tab=true",
+          "title": "PM-KISAN portal (search-indexed official text)",
+          "sections": "Mandatory eKYC; suspected cases pending physical verification",
+          "accessed_on": "2026-11-14"
+        }
+      ]
+    },
+    {
+      "scheme_id": "IN-WB-LAKSHMIR-BHANDAR",
+      "scheme_name": "Lakshmir Bhandar",
+      "government_level": "state",
+      "state": "West Bengal",
+      "category": "other",
+      "eligibility_conditions": {
+        "status": "partial",
+        "items": [
+          "Historical 2023 guidelines: West Bengal resident women aged 25–60 with a solely held Aadhaar-linked bank account."
+        ],
+        "source_ids": [
+          "guidelines-2023"
+        ],
+        "note": "Current eligibility under the Lakshmir Bhandar name after the 2026 migration is unknown. Do not apply historical conditions as current screening rules."
+      },
+      "exclusions": {
+        "status": "partial",
+        "items": [
+          "Historical 2023 guidelines exclude permanent/retired Central or State government employees and employees of the listed statutory, public-sector, local-government and government-aided educational bodies receiving regular salary/pension."
+        ],
+        "source_ids": [
+          "guidelines-2023"
+        ],
+        "note": "Current exclusion rules and migration exceptions: unknown; successor-scheme conditions are not imported."
+      },
+      "benefits": {
+        "status": "unknown",
+        "items": [],
+        "source_ids": [],
+        "note": "Current Lakshmir Bhandar entitlement is unknown: older district rates conflict with the February 2026 budget proposal and May 2026 migration evidence. Historical rates and proposal are documented in verification_notes."
+      },
+      "required_documents": {
+        "status": "partial",
+        "items": [
+          "Historical 2021 checklist: Swasthya Sathi card, Aadhaar, SC/ST certificate where applicable, bank-passbook details, colour passport photograph and signed residence/employment/truth declarations."
+        ],
+        "source_ids": [
+          "guidelines-2021"
+        ],
+        "note": "The 2021 guidelines were superseded in 2023; complete current checklist is unknown. Swasthya Sathi is not asserted to remain mandatory."
+      },
+      "application_process": {
+        "status": "partial",
+        "items": [
+          "Historical 2023 route: obtain the free form and submit it signed at a Duare Sarkar camp.",
+          "District page also describes offline submission at BDO/municipality offices."
+        ],
+        "source_ids": [
+          "guidelines-2023",
+          "district"
+        ],
+        "note": "Fresh Lakshmir Bhandar application availability after migration: unknown. These are source-described historical routes, not a confirmed open application service."
+      },
+      "verification_notes": [
+        "Current status: migration documented; continuation under the original name and full statewide transition terms are unknown. The requested scheme is retained as a historical record, not silently renamed.",
+        "31 March 2023 notification supersedes 30 July 2021 guidelines. South 24 Parganas still mentions Swasthya Sathi and INR 1200/month for SC/ST and INR 1000 for others; these are not accepted as current rates.",
+        "Interim Budget 2026–27 paragraph 21 proposes an additional INR 500/month from February 2026. A proposal is not proof of implemented entitlement.",
+        "WCDSW lists an Annapurna notification dated 20 May 2026, but its linked PDF was inaccessible. North 24 Parganas directly documents beneficiary migration; exact legal scope and current Lakshmir terms remain unknown.",
+        "Original commencement date is unknown; neither the 2023 modification nor the 2026 migration is used as effective_date."
+      ],
+      "official_source_url": "https://north24parganas.gov.in/notice/kyc-of-existing-lakshmir-bhandar-beneficiaries-who-have-been-migrated-to-annapurna-bhandar/",
+      "source_passage": "KYC of existing Lakshmir Bhandar beneficiaries who have been migrated to Annapurna Bhandar",
+      "effective_date": "unknown",
+      "verification_date": "2026-11-14",
+      "sources": [
+        {
+          "source_id": "migration",
+          "url": "https://north24parganas.gov.in/notice/kyc-of-existing-lakshmir-bhandar-beneficiaries-who-have-been-migrated-to-annapurna-bhandar/",
+          "title": "North 24 Parganas: beneficiary migration notice, 21–23 May 2026",
+          "sections": "Notice heading and description | Access: opened.",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "guidelines-2023",
+          "url": "https://socialsecurity.wb.gov.in/lokkhiBhandar/storage/app/public_doc/Guidelines%20of%20Lakshmir%20Bhandar%2031.03.2023.pdf",
+          "title": "WCDSW notification 1790-WCD/12099/5/2021, 31 March 2023",
+          "sections": "Opening; sections 1–3 | Exact evidence: \"She is aged between 25 – 60 years.\" | Access: search-indexed official PDF; direct fetch timed out.",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "guidelines-2021",
+          "url": "https://socialsecurity.wb.gov.in/lokkhiBhandar/storage/app/public_doc/Guidelines%20of%20Lakshmir%20Bhandar%2030.07.2021.pdf",
+          "title": "WCDSW guidelines, 30 July 2021 (superseded)",
+          "sections": "Section 3(c), documents; section 4, verification | Exact evidence: \"SC/ST certificate, if applicable\" | Access: search-indexed official PDF.",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "district",
+          "url": "https://s24pgs.gov.in/lakshmir-bhandar/",
+          "title": "South 24 Parganas: Lakshmir Bhandar",
+          "sections": "Scheme table; application column | Exact evidence: \"Apply Offline (BDO/Municipality office with prescribe form)\" | Access: opened.",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "budget-2026",
+          "url": "https://finance.wb.gov.in/writereaddata/Budget_Speech/2026-2027_English_I.pdf",
+          "title": "West Bengal interim Budget Speech 2026–27",
+          "sections": "Paragraph 21, printed page 178 | Exact evidence: \"an additional amount of Rs. 500 per month from February, 2026 onwards.\" | Access: search-indexed official PDF; direct fetch timed out.",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "notices",
+          "url": "https://wcdsw.wb.gov.in/notice/administrative_notice/",
+          "title": "WCDSW administrative notices",
+          "sections": "Notification dated 20 May 2026 | Exact evidence: \"Notification for Annapurna Yojana\" | Access: opened.",
+          "accessed_on": "2026-11-14"
+        }
+      ]
+    },
+    {
+      "scheme_id": "IN-WB-KANYASHREE",
+      "scheme_name": "Kanyashree Prakalpa",
+      "government_level": "state",
+      "state": "West Bengal",
+      "category": "education",
+      "eligibility_conditions": {
+        "status": "partial",
+        "items": [
+          "Unmarried West Bengal resident girls attending recognised education, with their own bank account.",
+          "K1: age band 13–18, Class VIII or above. K2: age band 18–19, continuing education.",
+          "The district checklist provides for a disability certificate where a girl above 13 studies below Class VIII and has disability of at least 40%."
+        ],
+        "source_ids": [
+          "district",
+          "faq"
+        ],
+        "note": "Current income condition is unknown: portal FAQ retains INR 120000 ceiling, while the 2019 government calendar reports waiver. Exact birthday cut-offs and all special-category exceptions are unknown."
+      },
+      "exclusions": {
+        "status": "partial",
+        "items": [
+          "Marriage disqualifies applicants under the published unmarried requirement; component-specific age and education conditions also apply."
+        ],
+        "source_ids": [
+          "district",
+          "faq"
+        ],
+        "note": "No income-based exclusion is asserted while the sources conflict. Complete exclusion and exception list: unknown."
+      },
+      "benefits": {
+        "status": "verified",
+        "items": [
+          "K1 annual scholarship: INR 1000. K2 one-time grant: INR 25000; payment goes to the beneficiary's account."
+        ],
+        "source_ids": [
+          "district",
+          "faq"
+        ],
+        "note": "Descriptive summary of cited official sources; not an eligibility decision."
+      },
+      "required_documents": {
+        "status": "partial",
+        "items": [
+          "Parent/guardian voter-card copy, birth-certificate copy, marital-status declaration, bank-passbook copy, and colour passport photograph on white background.",
+          "Disability certificate from the appropriate authority for the described below-Class-VIII exception."
+        ],
+        "source_ids": [
+          "district"
+        ],
+        "note": "Current income-document requirement and complete special-category checklist: unknown."
+      },
+      "application_process": {
+        "status": "partial",
+        "items": [
+          "Obtain the relevant form from the applicant's school/college and provide the documents; sanctioned assistance is credited to her bank account."
+        ],
+        "source_ids": [
+          "district"
+        ],
+        "note": "Current submission deadlines, renewal workflow and all special-category routes: unknown."
+      },
+      "verification_notes": [
+        "Scope is K1 and K2 only; postgraduate K3 is not merged into this record.",
+        "The primary district page is dated 25 May 2022. Current portal FAQ agrees on K1/K2 amounts but conflicts with the government's reported income-ceiling waiver. No latest operative amendment resolving that conflict was retrieved.",
+        "Primary district wording says K2 more than 18 and under 19; portal gives 18–19. Exact birthday inclusivity remains unknown.",
+        "Original commencement date is unknown in this evidence set."
+      ],
+      "official_source_url": "https://purbamedinipur.gov.in/kanyashree/",
+      "source_passage": "A one-time financial grant of Rs. 25,000 is given to unmarried girls.",
+      "effective_date": "unknown",
+      "verification_date": "2026-11-14",
+      "sources": [
+        {
+          "source_id": "district",
+          "url": "https://purbamedinipur.gov.in/kanyashree/",
+          "title": "Purba Medinipur: Kanyashree",
+          "sections": "K1/K2 benefits; qualifications; documents; institution forms | Access: opened.",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "faq",
+          "url": "https://kanyashree.wb.gov.in/faq",
+          "title": "Kanyashree portal FAQ",
+          "sections": "Conditions / Eligibilties | Exact evidence: \"From families where the total income is not more than Rs. 1,20,000 per year.\" | Access: opened.",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "calendar-2019",
+          "url": "https://cm.wb.gov.in/ncmo/publication/Administrative_Calender_Total_Book_2019.pdf",
+          "title": "West Bengal Administrative Calendar 2019",
+          "sections": "Achievements: Women & Child Development and Social Welfare | Exact evidence: \"Annual family income ceiling of Rs. 1,20,000/- has been waived for the ‘Kanyashree’ beneficiaries.\" | Access: search-indexed official PDF; direct fetch timed out.",
+          "accessed_on": "2026-11-14"
+        }
+      ]
+    },
+    {
+      "scheme_id": "IN-WB-RUPASHREE",
+      "scheme_name": "Rupashree Prakalpa",
+      "government_level": "state",
+      "state": "West Bengal",
+      "category": "other",
+      "eligibility_conditions": {
+        "status": "verified",
+        "items": [
+          "Woman aged at least 18, unmarried at application, proposing her first marriage; groom aged at least 21.",
+          "Born in West Bengal, or resident for five years, or parents permanent residents; family income at most INR 150000/year.",
+          "Active sole-holder bank account supporting NEFT with IFSC and MICR."
+        ],
+        "source_ids": [
+          "sop"
+        ],
+        "note": "Descriptive summary of cited official sources; not an eligibility decision."
+      },
+      "exclusions": {
+        "status": "partial",
+        "items": [
+          "Subsequent marriages do not qualify; this is one-time assistance for a particular bride."
+        ],
+        "source_ids": [
+          "alipurduar"
+        ],
+        "note": "Additional exclusions beyond the stated eligibility conditions: unknown."
+      },
+      "benefits": {
+        "status": "verified",
+        "items": [
+          "One-time marriage assistance of INR 25000."
+        ],
+        "source_ids": [
+          "sop"
+        ],
+        "note": "Descriptive summary of cited official sources; not an eligibility decision."
+      },
+      "required_documents": {
+        "status": "partial",
+        "items": [
+          "Bride/groom age proof; never-married declaration; income and residence declarations certified by competent authority; bank-passbook copy; invitation card or marriage-registration notice; colour passport photos of both.",
+          "Use the prescribed attestation for age and bank copies; accepted age proofs include birth certificate, voter ID, PAN, Madhyamik admit card, Aadhaar or primary-school leaving certificate."
+        ],
+        "source_ids": [
+          "sop"
+        ],
+        "note": "This is the opened SOP checklist; any changes in the listed July 2025 form are unknown because that form was not inspected."
+      },
+      "application_process": {
+        "status": "partial",
+        "items": [
+          "Obtain free form; submit with documents to the relevant BDO, SDO or Municipal Corporation office 30–60 days before marriage.",
+          "Enquiry and sanction precede transfer to the applicant's account."
+        ],
+        "source_ids": [
+          "sop",
+          "darjeeling"
+        ],
+        "note": "Alipurduar describes online processing from April 2019; a public self-service route is unknown."
+      },
+      "effective_date": "2018-04-01",
+      "verification_notes": [
+        "State SOP requires bride age 18 at application; Alipurduar says at marriage. The stricter state-SOP wording is retained; whether amended is unknown.",
+        "Income boundary follows the state SOP: not greater than INR 150000, rather than summaries saying less than.",
+        "WCDSW lists a Rupashree application form dated 24 July 2025; the Google Drive attachment was not inspected. No confirmed benefit amendment found in the official material reviewed.",
+        "Commencement 1 April 2018 is explicitly supported by Alipurduar; 1 April 2019 refers to processing, not scheme commencement."
+      ],
+      "official_source_url": "https://www.wb.gov.in/duare_sarkar/Rupashree.pdf",
+      "source_passage": "The benefit is one time and amount is Rs.25000/-",
+      "verification_date": "2026-11-14",
+      "sources": [
+        {
+          "source_id": "sop",
+          "url": "https://www.wb.gov.in/duare_sarkar/Rupashree.pdf",
+          "title": "WCDSW Rupashree Duare Sarkar SOP and FAQ",
+          "sections": "PDF pages 1–2 and 6–7: eligibility, documents, benefit, submission | Access: opened.",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "alipurduar",
+          "url": "https://alipurduar.gov.in/rupashree/",
+          "title": "Alipurduar: Rupashree",
+          "sections": "About the Sections; commencement and exclusions | Exact evidence: \"The scheme has been made operational since 01.04.18.\" | Access: opened.",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "darjeeling",
+          "url": "https://darjeeling.gov.in/rupashree/",
+          "title": "Darjeeling: Rupashree",
+          "sections": "Application submission and processing | Exact evidence: \"not less than 30 days and not more than 60 days before the date of the proposed marriage.\" | Access: search-indexed official page; direct fetch timed out.",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "notices",
+          "url": "https://wcdsw.wb.gov.in/notice/administrative_notice/",
+          "title": "WCDSW administrative notices",
+          "sections": "Application form dated 24 July 2025 | Exact evidence: \"Rupashree Application Form\" | Access: opened.",
+          "accessed_on": "2026-11-14"
+        }
+      ]
+    },
+    {
+      "scheme_id": "IN-WB-KRISHAK-BANDHU",
+      "scheme_name": "Krishak Bandhu (Natun)",
+      "government_level": "state",
+      "state": "West Bengal",
+      "category": "agriculture_income_support",
+      "eligibility_conditions": {
+        "status": "partial",
+        "items": [
+          "Assured income: farmer with land RoR in their name or a recorded sharecropper, according to the legacy SOP.",
+          "Death component: legal heir of a deceased farmer/recorded sharecropper aged 18–60."
+        ],
+        "source_ids": [
+          "legacy-sop",
+          "district"
+        ],
+        "note": "Later changes to income-component enrolment rules and exact death-age boundaries: unknown. The death age band is not applied to income support."
+      },
+      "exclusions": {
+        "status": "partial",
+        "items": [
+          "The separate landless-labourer FAQ distinguishes workers without owned farmland or recorded sharecropping from Krishak Bandhu (Natun)."
+        ],
+        "source_ids": [
+          "landless-sop"
+        ],
+        "note": "Full exclusions and treatment of unrecorded tenancy: unknown. Separate labourer-scheme benefits are not merged."
+      },
+      "benefits": {
+        "status": "partial",
+        "items": [
+          "Natun: up to INR 10000/year for at least one acre; smaller holdings receive pro-rata aid with INR 4000/year minimum, in two equal seasonal instalments.",
+          "Death benefit: one-time INR 200000 for eligible legal heirs."
+        ],
+        "source_ids": [
+          "agriculture",
+          "district"
+        ],
+        "note": "Natun scale supported by official indexed text; later operative amendments are unknown."
+      },
+      "required_documents": {
+        "status": "partial",
+        "items": [
+          "Legacy assured-income SOP: voter ID, RoR, bank passbook first page/cancelled cheque, recent passport photograph; originals for verification and copies."
+        ],
+        "source_ids": [
+          "legacy-sop"
+        ],
+        "note": "Updated Natun/Aadhaar requirements and complete death-claim checklist: unknown. District's agricultural-labour registration certificate is not adopted without clarification."
+      },
+      "application_process": {
+        "status": "partial",
+        "items": [
+          "Legacy SOP: submit form at the designated camp, obtain acknowledgement; Block Assistant Director of Agriculture verifies application/land data and approves or rejects; valid bank details enable DBT."
+        ],
+        "source_ids": [
+          "legacy-sop"
+        ],
+        "note": "Current public online self-registration and death-claim submission steps: unknown; district signup instructions were not confirmed on the live portal."
+      },
+      "verification_notes": [
+        "Natun launch on 17 June 2021 doubled earlier assistance; pre-Natun SOP rates of INR 5000 maximum/2000 minimum are obsolete and are not used.",
+        "Original scheme began in January 2019 according to Economic Review; exact original day is unknown, so effective_date remains unknown rather than using the Natun relaunch date.",
+        "Current Agriculture page, economic review and legacy SOP were accessible through indexed official text only. Cooch Behar page was opened but is dated June 2022 and mixes income/death material.",
+        "Official 2026 landless-labourer scheme is distinct. No confirmed later Natun benefit amendment was found; this does not establish that none exists."
+      ],
+      "official_source_url": "https://coochbehar.gov.in/krishak-bandhu/",
+      "source_passage": "The Krishak Bandhu Scheme caters to the farming community by means of assured continuous income and insurance coverage.",
+      "effective_date": "unknown",
+      "verification_date": "2026-11-14",
+      "sources": [
+        {
+          "source_id": "district",
+          "url": "https://coochbehar.gov.in/krishak-bandhu/",
+          "title": "Cooch Behar: Krishak Bandhu",
+          "sections": "Brief description; death benefit eligibility | Access: opened.",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "agriculture",
+          "url": "https://agriculture.wb.gov.in/krishak-bandhu-natun-",
+          "title": "Agriculture Department: Krishak Bandhu (Natun)",
+          "sections": "Assistance scale and two seasonal instalments | Exact evidence: \"The financial assistance is disbursed in two equal instalments:\" | Access: search-indexed official page; direct fetch timed out.",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "legacy-sop",
+          "url": "https://www.wb.gov.in/duare_sarkar/Krishak_Bandhu.pdf",
+          "title": "Krishak Bandhu Duare Sarkar SOP (pre-Natun rates)",
+          "sections": "Assured income FAQ Q1–Q6; ADA verification | Exact evidence: \"Any farmer having ROR in his name or recorded [in the RoR] Bhagchasi (share-cropper).\" | Access: search-indexed official PDF; direct fetch timed out.",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "review-2021",
+          "url": "https://finance.wb.gov.in/writereaddata/Economic_Review/Economic_Review21.pdf",
+          "title": "West Bengal Economic Review 2021",
+          "sections": "Highlights, printed page v: Krishak Bandhu (Natun) | Exact evidence: \"revamped and launched as Krishak Bandhu (Natun) on 17th June, 2021\" | Access: search-indexed official PDF; direct fetch timed out.",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "landless-sop",
+          "url": "https://krishakbandhu.wb.gov.in/agricultural-labour/SOP_ENG.pdf",
+          "title": "Separate landless agricultural labourers scheme FAQ",
+          "sections": "Q2 eligibility; distinction from Krishak Bandhu | Exact evidence: \"do not own any agriculture land and, therefore, are not entitled for the Krishak Bandhu (Natun) Scheme\" | Access: search-indexed official PDF; direct fetch timed out.",
+          "accessed_on": "2026-11-14"
+        }
+      ]
+    },
+    {
+      "scheme_id": "IN-WB-SWASTHYA-SATHI",
+      "scheme_name": "Swasthya Sathi",
+      "government_level": "state",
+      "state": "West Bengal",
+      "category": "health",
+      "eligibility_conditions": {
+        "status": "partial",
+        "items": [
+          "Permanent West Bengal residents, subject to the published health-insurance and salary-allowance restrictions."
+        ],
+        "source_ids": [
+          "district"
+        ],
+        "note": "Current statewide enrolment/transition conditions after the 2026 PM-JAY announcement: unknown."
+      },
+      "exclusions": {
+        "status": "partial",
+        "items": [
+          "District guidance excludes people already insured under a government-sponsored health-insurance scheme or receiving medical allowance with salary."
+        ],
+        "source_ids": [
+          "district"
+        ],
+        "note": "Post-transition interaction with PM-JAY, opt-out exceptions and full treatment/package exclusions: unknown. Pre-existing disease is not listed as an exclusion."
+      },
+      "benefits": {
+        "status": "partial",
+        "items": [
+          "Published cover: cashless secondary/tertiary care up to INR 500000 per family annually; pre-existing diseases included; premium paid by the State.",
+          "No family-size cap; parents of both spouses and dependent members with disabilities are included."
+        ],
+        "source_ids": [
+          "features"
+        ],
+        "note": "Current package limits and statewide operational changes after 2026 transition: unknown; coverage does not imply every treatment is payable."
+      },
+      "required_documents": {
+        "status": "partial",
+        "items": [
+          "Aadhaar, identity proof such as voter/ration card, and permanent-residence proof."
+        ],
+        "source_ids": [
+          "district"
+        ],
+        "note": "Alternative documents, exact mandatory combinations and current enrolment checklist: unknown."
+      },
+      "application_process": {
+        "status": "partial",
+        "items": [
+          "Submit Form B; nodal officer/BDO/municipality verifies and uploads it; de-duplication generates family URN; smart card is issued at camp or enrolment centre."
+        ],
+        "source_ids": [
+          "district"
+        ],
+        "note": "Fresh enrolment availability and migration steps under the 2026 transition: unknown."
+      },
+      "effective_date": "2016-04-01",
+      "verification_notes": [
+        "Original notification's effective date is 1 April 2016; December 2016 launch is a different event. Original INR 150000 basic/INR 500000 critical-care wording is not substituted for later published family cover.",
+        "Akashvani reported planned PM-JAY incorporation from July 2026, but PIB confirmed both schemes operating at AIIMS Kalyani on 18 August 2026. Statewide migration completion, closure and fresh enrolment status are unknown.",
+        "The district sources predate transition. Retained as source-backed published terms with partial status; no claim of fully current statewide entitlement.",
+        "Full original notification was not retrieved; effective-date evidence is indexed official text."
+      ],
+      "official_source_url": "https://coochbehar.gov.in/swasthya-sathi/",
+      "source_passage": "Should be permanent residents of West Bengal.",
+      "verification_date": "2026-11-14",
+      "sources": [
+        {
+          "source_id": "district",
+          "url": "https://coochbehar.gov.in/swasthya-sathi/",
+          "title": "Cooch Behar: Swasthya Sathi",
+          "sections": "Eligibility; Form B; documents | Access: opened.",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "features",
+          "url": "https://ddinajpur.nic.in/swasthya-sathi/",
+          "title": "Dakshin Dinajpur: Swasthya Sathi",
+          "sections": "Main features | Exact evidence: \"All pre-existing diseases are covered.\" | Access: opened.",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "notification",
+          "url": "https://finance.wb.gov.in/writereaddata/1104-F%28P%29.pdf",
+          "title": "Finance notification 1104-F(P), 25 February 2016",
+          "sections": "Paragraph 6: original effective date | Exact evidence: \"The scheme will be effective from 1st April 2016.\" | Access: search-indexed official PDF; direct fetch timed out.",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "pib-2026",
+          "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2300852&lang=2&reg=48",
+          "title": "PIB: PM-JAY operationalised at AIIMS Kalyani, 18 August 2026",
+          "sections": "Coexistence at AIIMS Kalyani | Exact evidence: \"AB-PMJAY and Swasthya Sathi are now both functional at AIIMS Kalyani.\" | Access: opened.",
+          "accessed_on": "2026-11-14"
+        },
+        {
+          "source_id": "transition",
+          "url": "https://newsonair.gov.in/ayushman-bharat-scheme-to-be-launched-in-west-bengal-from-july-2026/",
+          "title": "Akashvani: announced PM-JAY transition",
+          "sections": "May 2026 announcement | Exact evidence: \"The existing beneficiaries under the state health scheme Swasthya Sathi will be incorporated into the Ayushman Bharat scheme.\" | Access: search-indexed official government news.",
+          "accessed_on": "2026-11-14"
+        }
+      ]
+    }
+  ]
+}

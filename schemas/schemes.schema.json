@@ -1,0 +1,250 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AdhikarAI government welfare scheme dataset",
+  "description": "Source-backed descriptive records, not executable eligibility rules. IDs are local project identifiers.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "schemes"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "schemes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/scheme"
+      }
+    }
+  },
+  "$defs": {
+    "scheme": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scheme_id",
+        "scheme_name",
+        "government_level",
+        "state",
+        "category",
+        "eligibility_conditions",
+        "exclusions",
+        "benefits",
+        "required_documents",
+        "application_process",
+        "official_source_url",
+        "source_passage",
+        "effective_date",
+        "verification_date",
+        "verification_notes",
+        "sources"
+      ],
+      "properties": {
+        "scheme_id": {
+          "type": "string",
+          "pattern": "^IN-[A-Z0-9-]+$"
+        },
+        "scheme_name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "government_level": {
+          "enum": [
+            "central",
+            "state"
+          ]
+        },
+        "state": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "category": {
+          "enum": [
+            "agriculture_income_support",
+            "accident_insurance",
+            "life_insurance",
+            "pension",
+            "health",
+            "education",
+            "housing",
+            "other"
+          ]
+        },
+        "eligibility_conditions": {
+          "$ref": "#/$defs/fact"
+        },
+        "exclusions": {
+          "$ref": "#/$defs/fact"
+        },
+        "benefits": {
+          "$ref": "#/$defs/fact"
+        },
+        "required_documents": {
+          "$ref": "#/$defs/fact"
+        },
+        "application_process": {
+          "$ref": "#/$defs/fact"
+        },
+        "official_source_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "source_passage": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "effective_date": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            {
+              "const": "unknown"
+            }
+          ]
+        },
+        "verification_date": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "verification_notes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/source"
+          }
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "url",
+        "title",
+        "sections",
+        "accessed_on"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "sections": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "accessed_on": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        }
+      }
+    },
+    "fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "items",
+        "source_ids",
+        "note"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "verified",
+            "partial",
+            "unknown"
+          ]
+        },
+        "items": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "source_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "unknown"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "items": {
+                "maxItems": 0
+              },
+              "source_ids": {
+                "maxItems": 0
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "items": {
+                "minItems": 1
+              },
+              "source_ids": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
