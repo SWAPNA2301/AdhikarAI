@@ -22,6 +22,9 @@ dist/
 *.egg-info/
 
 # Local datasets (retain the directory structure)
+# Phase 3B persistent vector database and downloaded embedding models
+data/chroma/
+data/models/
 data/**
 !data/raw/
 !data/raw/.gitkeep

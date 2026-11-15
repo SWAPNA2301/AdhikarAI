@@ -99,7 +99,8 @@ class PdfProcessingTests(unittest.TestCase):
             self.assertFalse(path.exists())
 
     def test_ten_schemes_unchanged_since_phase_2b(self):
-        raw = (ROOT / "data/processed/schemes.json").read_bytes()
+        # Git may check out CRLF on Windows; compare the original LF bytes.
+        raw = (ROOT / "data/processed/schemes.json").read_bytes().replace(b"\r\n", b"\n")
         self.assertEqual(len(json.loads(raw)["schemes"]), 10)
         self.assertEqual(hashlib.sha256(raw).hexdigest(),
                          "5f3842eef3e43c1f7d44fff8b192091ca5af92fbb00b63bf970f6e2f35dc3638")

@@ -1,9 +1,42 @@
 # AdhikarAI
 
-Government scheme discovery, starting with a minimal Phase 1 Streamlit app.
-Search is disabled; no eligibility assessments or simulated results are included.
-A curated dataset of ten schemes (five Central and five West Bengal) is available for development
-but is not loaded into the application. No API keys are required.
+Government scheme discovery with a Streamlit app backed by ten curated schemes
+(five Central and five West Bengal). Search by name, ID, benefits, or keywords and
+combine government-level, coverage, and category filters. Search is case-insensitive;
+all entered words must occur in a record. Empty search shows all records matching
+the filters. Coverage selects the recorded scope; All India includes West Bengal.
+Each result preserves evidence statuses, uncertainty notes, field-level source links,
+official excerpts, and source access/verification dates. No API keys are required.
+Semantic mode also retrieves related schemes and available PDF chunks locally.
+Optional Phase 3C Q&A uses Groq to select cited evidence. Keyword and semantic search
+remain local and require no API key. Eligibility mode deterministically checks
+documented new-application criteria; it does not approve entitlement.
+
+## Documented eligibility checks
+
+Choose **Eligibility**, select a scheme, enter only the relevant facts, then click
+**Check criteria**. Missing answers default to Unknown. Results are **meets criteria**,
+**does not meet criteria**, or **insufficient information**, with per-condition source
+links, exact recorded evidence and uncertainty notes. This uses no LLM or semantic
+similarity. Age means completed years at application; APY additionally asks whether
+an age-40 application is on the 40th birthday. Renewals, continuation and claims
+return insufficient information because only new-application rules were audited.
+
+The [ten-scheme audit](docs/eligibility-audit.md) identifies what can safely be
+checked. PM-KISAN and the unresolved historical/transition records always return
+insufficient information. Partial records cannot receive a positive determination;
+an explicit, unambiguous failed requirement can still explain a negative result
+for active checks. Unknown exclusions, income conflicts or birthday boundaries are
+never filled in with assumptions. Meets criteria only describes the audited
+checks, not a guarantee that every current official condition has been met.
+
+Answers and results remain in session memory and are not written to files, indexed,
+logged or sent to Groq. **Clear eligibility answers** removes this form's session
+answers and displayed result. No names, identity/account numbers or exact birth dates
+are requested. A remote Streamlit server would receive form values in memory.
+The public evidence fingerprint in `eligibility_audit.json` stops checks when source
+records change; re-audit rules and tests before updating it. Run all tests with
+`python -m unittest discover -s tests -v`.
 
 ## Install
 
@@ -36,8 +69,8 @@ python -m pip install -r requirements-dev.txt
 python -m unittest discover -s tests -v
 ```
 
-The smoke test renders the real Streamlit page and verifies its title,
-placeholder message, and disabled search controls. Dataset tests validate the
+The app tests render the real Streamlit page and verify search, combined filters,
+empty results, dataset errors, and preservation of citations and uncertainty. Dataset tests validate the
 JSON Schema, provenance references, dates, IDs, unknowns, and malformed records.
 
 ## Structure
@@ -67,7 +100,8 @@ Keep local datasets under `data/`; directory placeholders and the curated public
 [Official sources and verification notes](docs/scheme_sources.md) document the
 ten schemes, evidence, source conflicts and unknown fields. Verification date:
 2026-11-14. Records are descriptive and may be partial, not executable eligibility
-rules. No RAG, embeddings, LLM integration or eligibility engine is implemented.
+rules. Phase 3B adds local embeddings and retrieval; Phase 3C adds optional grounded
+Q&A. No eligibility engine is implemented.
 
 Phase 2B adds Lakshmir Bhandar, Kanyashree, Rupashree, Krishak Bandhu and
 Swasthya Sathi using the unchanged schema. Exact excerpts and retrieval limitations
@@ -111,3 +145,147 @@ Run all tests with the command in the Test section. The
 [PDF tests](tests/test_pdf_processing.py) are offline and cover text cleanup,
 chunk coverage, provenance, blank/image-only pages, corrupt/encrypted PDFs,
 non-PDF responses and preservation of all ten scheme records.
+
+## Phase 3B: local semantic search
+
+Install updated dependencies with `python -m pip install -e . -r requirements-dev.txt`.
+In Streamlit, choose **Semantic**, click **Build / update local index**, then enter
+a question or description. Select 1–20 top matches. Existing keyword search is
+unchanged. Scheme filters combine with semantic search; PDF chunks have no scheme
+taxonomy, so selecting a non-All filter excludes them.
+
+You can also build and query from the project root:
+
+```powershell
+python -m adhikar_ai.semantic_search --query "financial support for retirement"
+```
+
+The [indexer](src/adhikar_ai/semantic_search.py) uses
+`sentence-transformers/all-MiniLM-L6-v2` on CPU. The first build downloads the free
+model; subsequent runs prefer the local cache. No text is sent to an inference API.
+The model cache lives in `data/models/` and Chroma persists automatically in
+`data/chroma/`; both are ignored by Git. Chroma telemetry is disabled.
+
+All ten scheme records are indexed with their complete evidence payloads.
+If `data/processed/pdf_chunks.json` exists, its nonempty chunks are included with
+original/resolved URLs, page numbers, extraction warnings, timestamps, hashes,
+and offsets. A missing PDF file is allowed and the UI reports the available count.
+Run Phase 3A first to obtain PDF chunks, then update the index.
+
+Long records are split into model-sized token windows; normalized window embeddings
+are averaged and normalized again, avoiding silent loss of the end of a record.
+Retrieval uses cosine distance (lower is closer), not a confidence score or an
+eligibility judgment. This small English embedding model may perform poorly on
+other languages and can return weak matches for unrelated questions.
+
+Index collections are keyed by source contents, metadata, model name, and encoding
+recipe. Changed sources require a new build; incomplete builds cannot be searched.
+Rebuilding unchanged sources reuses the stored embeddings. Older source snapshots
+remain on disk but are never queried for a different snapshot.
+
+The [semantic tests](tests/test_semantic_search.py) use real local Chroma with
+deterministic test embeddings, so the test suite needs no model download or network.
+They cover persistence, ranking, combined filters, stale/incomplete indexes,
+idempotent builds, and PDF provenance. App tests cover semantic results and citations.
+
+## Phase 3C: optional grounded Q&A
+
+Set `GROQ_API_KEY` in the project-root `.env` or server process environment.
+The process environment takes precedence, including an explicitly empty value.
+The local file is read without interpolation or logging its contents. Do not paste credentials into the app,
+source files, chat, or the tracked [.env.example](.env.example), which must remain blank.
+The ignored `.env` is read using the declared `python-dotenv` dependency.
+Without the key, Q&A is disabled and semantic search still works.
+
+Choose **Q&A**, enter a question in the search box, and click **Answer from sources**.
+Build the local index in Semantic or Q&A mode first if needed. Existing filters and
+top-match limits apply. Only the explicit answer button calls Groq; normal search
+and reruns do not make an LLM request. Your question and a bounded set of retrieved
+evidence are sent to Groq. Provider account quotas/pricing apply.
+
+The [RAG module](src/adhikar_ai/rag.py) calls Groq's
+[chat-completions API](https://console.groq.com/docs/api-reference) using
+`llama-3.3-70b-versatile`, JSON mode, and a 30-second timeout.
+For this conservative first version, the LLM selects evidence IDs instead of
+generating free-form claims. Local validation rejects unknown IDs, additional
+claim fields, invalid JSON/types, and incomplete responses. The app displays only
+the exact selected stored passages, field-level citations, source dates, and
+uncertainty notes. PDF answers include page numbers; suspect extraction text is
+excluded from Q&A but remains visible in semantic results.
+
+Missing evidence, an unsupported response, or model-reported gaps produce an
+explicit insufficient-information message. Supported passages may accompany a
+partial answer. This prevents new model-written claims from reaching the UI;
+it does not prove that sources are current or that the model selected every
+relevant passage. Personal eligibility decisions are outside scope.
+
+The API key is used only in the authorization header. Provider error bodies and
+exceptions are not displayed or logged, and responses are not persisted. Authentication,
+network, or provider failures show a generic message while retrieval remains usable.
+The [mocked RAG tests](tests/test_rag.py) and [UI tests](tests/test_app.py) cover
+supported answers, invalid claims/citations, insufficient evidence, absent keys,
+provider failures, secret-safe errors, and explicit submission. Run the full suite
+with `python -m unittest discover -s tests -v`; tests make no Groq requests.
+
+## Find schemes from personal documents
+
+Semantic retrieval discards results with cosine distance above **0.82** and shows
+**No sufficiently relevant schemes found** when none remain. Empty queries prompt
+for input; obvious keyboard noise is rejected before loading the model. The cutoff
+applies to semantic search, Q&A retrieval, document matching and profiles, preserving
+filters and source citations. Configure `SEMANTIC_MAX_DISTANCE` in the server's
+environment (finite number from 0 to 2); lower values are stricter. For example,
+in PowerShell use `$env:SEMANTIC_MAX_DISTANCE = "0.80"` before starting Streamlit.
+Python callers can override it with `search(..., max_distance=0.80)`.
+This setting is read from the process environment, not the Groq `.env` file.
+See [measurements and limitations](docs/semantic-calibration.md) and rerun
+`python tests/calibrate_semantic.py` when the corpus or embedding model changes.
+
+Choose **My documents**. Upload one text-based PDF or UTF-8 TXT file (up to 5 MB,
+20 PDF pages, and 20,000 extracted characters), review/edit the extracted text, and
+click **Find potential schemes**. You can also type a short description without
+uploading anything. Scanned/image-only, encrypted, malformed, or oversized files
+produce a helpful message; OCR is not included.
+
+Matching uses the existing local semantic index and returns up to five scheme
+records. Build the index in Semantic mode first. Choosing another state excludes
+West Bengal schemes; West Bengal includes national schemes. These are similarity
+suggestions, not eligibility determinations: review the published conditions and
+exclusions. The dataset covers only ten schemes.
+
+Each result includes **Apply / official instructions** links from that record's
+cited application sources, alongside the application process and evidence details.
+These may be guidance pages rather than online forms; some schemes require visiting
+a bank or office. URLs are never guessed and applications are not submitted by the app.
+
+Personal files and extracted text stay in the local Streamlit process/session memory;
+they are not written to disk, added to Chroma, or sent to Groq. Use **Clear documents
+and details** to clear the upload and text from the UI session. This is not a guarantee
+of secure memory erasure. Remove identity numbers and unnecessary personal data before
+uploading. If deployed remotely, the Streamlit server receives the uploaded file.
+
+## Voice input and individual/family profiles
+
+Open **Voice input** beside search, document details, or a profile member. Allow
+microphone access, record up to two minutes (5 MB), then click **Transcribe into text**.
+This explicit action sends only the recording to Groq's
+[Whisper transcription service](https://console.groq.com/docs/speech-to-text), using
+`whisper-large-v3-turbo` and the configured API key. Provider quotas apply.
+Review/correct the transcript before searching, matching, or saving. Transcription
+replaces the associated text field. Recordings are not written to disk by the app.
+Without a key, manual typing and local matching remain available. A microphone
+requires browser permission and localhost or HTTPS. Scheme matching still uses
+the English-oriented local embedding model; non-English accuracy may be limited.
+
+In **Profiles**, choose **Individual** or **Family**. Enter an optional nickname,
+age, occupation/student status, and support needs. A family profile holds up to
+ten members and a shared state; suggestions are generated separately for each member,
+with citations and official application instructions. The app does not infer that
+one person's eligibility or circumstances apply to the whole family.
+
+**Save profile for this session** retains each profile type independently while
+you navigate. **Find schemes for this profile** uses the currently displayed edits.
+Profiles are session-only, not accounts or permanent storage; a new session may
+lose them. **Delete all saved profiles** clears both types and their entry fields.
+Do not provide identity numbers or unnecessary sensitive information. Matching
+remains a shortlist of possible schemes, not an eligibility assessment.
