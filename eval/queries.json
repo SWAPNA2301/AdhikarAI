@@ -1,0 +1,284 @@
+[
+  {
+    "query": "Pradhan Mantri Suraksha Bima Yojana",
+    "gold_scheme_ids": [
+      "IN-PMSBY"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+    "gold_scheme_ids": [
+      "IN-PMJJBY"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Atal Pension Yojana",
+    "gold_scheme_ids": [
+      "IN-APY"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Pradhan Mantri Shram Yogi Maandhan",
+    "gold_scheme_ids": [
+      "IN-PM-SYM"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Pradhan Mantri Kisan Samman Nidhi",
+    "gold_scheme_ids": [
+      "IN-PM-KISAN"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Lakshmir Bhandar",
+    "gold_scheme_ids": [
+      "IN-WB-LAKSHMIR-BHANDAR"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Kanyashree Prakalpa",
+    "gold_scheme_ids": [
+      "IN-WB-KANYASHREE"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Rupashree Prakalpa",
+    "gold_scheme_ids": [
+      "IN-WB-RUPASHREE"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Krishak Bandhu",
+    "gold_scheme_ids": [
+      "IN-WB-KRISHAK-BANDHU"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Swasthya Sathi",
+    "gold_scheme_ids": [
+      "IN-WB-SWASTHYA-SATHI"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "I need low cost insurance if an accident leaves me disabled",
+    "gold_scheme_ids": [
+      "IN-PMSBY"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Life insurance to support my family if I die",
+    "gold_scheme_ids": [
+      "IN-PMJJBY"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "I want to contribute now for a monthly pension after sixty",
+    "gold_scheme_ids": [
+      "IN-APY",
+      "IN-PM-SYM"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "I am a street vendor looking for a retirement pension",
+    "gold_scheme_ids": [
+      "IN-PM-SYM",
+      "IN-APY"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Income support for a farmer who owns agricultural land",
+    "gold_scheme_ids": [
+      "IN-PM-KISAN",
+      "IN-WB-KRISHAK-BANDHU"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Monthly financial assistance for women in West Bengal",
+    "gold_scheme_ids": [
+      "IN-WB-LAKSHMIR-BHANDAR"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "money for my daughter's education",
+    "gold_scheme_ids": [
+      "IN-WB-KANYASHREE"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "My daughter is getting married and we need financial assistance",
+    "gold_scheme_ids": [
+      "IN-WB-RUPASHREE"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Help for a farming family in Bengal after the farmer dies",
+    "gold_scheme_ids": [
+      "IN-WB-KRISHAK-BANDHU"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Cashless hospital treatment for my family in West Bengal",
+    "gold_scheme_ids": [
+      "IN-WB-SWASTHYA-SATHI"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Insurance for accidental death through my bank account",
+    "gold_scheme_ids": [
+      "IN-PMSBY"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Bank account life cover with an annual premium",
+    "gold_scheme_ids": [
+      "IN-PMJJBY"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "I work as a domestic helper and earn little, can I save for retirement",
+    "gold_scheme_ids": [
+      "IN-PM-SYM",
+      "IN-APY"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "A grant to help an unmarried girl stay in school in Bengal",
+    "gold_scheme_ids": [
+      "IN-WB-KANYASHREE"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Support for a woman's first marriage in West Bengal",
+    "gold_scheme_ids": [
+      "IN-WB-RUPASHREE"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "West Bengal financial help for cultivating my farm",
+    "gold_scheme_ids": [
+      "IN-WB-KRISHAK-BANDHU",
+      "IN-PM-KISAN"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "I need help paying hospital bills",
+    "gold_scheme_ids": [
+      "IN-WB-SWASTHYA-SATHI"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Help with retirement",
+    "gold_scheme_ids": [
+      "IN-APY",
+      "IN-PM-SYM"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Help for farmers",
+    "gold_scheme_ids": [
+      "IN-PM-KISAN",
+      "IN-WB-KRISHAK-BANDHU"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Support for girls",
+    "gold_scheme_ids": [
+      "IN-WB-KANYASHREE",
+      "IN-WB-RUPASHREE"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Insurance",
+    "gold_scheme_ids": [
+      "IN-PMSBY",
+      "IN-PMJJBY",
+      "IN-WB-SWASTHYA-SATHI"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Help for women",
+    "gold_scheme_ids": [
+      "IN-WB-LAKSHMIR-BHANDAR",
+      "IN-WB-KANYASHREE",
+      "IN-WB-RUPASHREE"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "School assistance",
+    "gold_scheme_ids": [
+      "IN-WB-KANYASHREE"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Marriage support",
+    "gold_scheme_ids": [
+      "IN-WB-RUPASHREE"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "Health cover",
+    "gold_scheme_ids": [
+      "IN-WB-SWASTHYA-SATHI"
+    ],
+    "language": "en"
+  },
+  {
+    "query": "How do I renew my passport",
+    "gold_scheme_ids": [],
+    "language": "en"
+  },
+  {
+    "query": "Subsidy for installing solar panels on my rooftop",
+    "gold_scheme_ids": [],
+    "language": "en"
+  },
+  {
+    "query": "Education loan for a master's degree abroad",
+    "gold_scheme_ids": [],
+    "language": "en"
+  },
+  {
+    "query": "How can I repair my laptop screen",
+    "gold_scheme_ids": [],
+    "language": "en"
+  },
+  {
+    "query": "Unemployment allowance for a software engineer",
+    "gold_scheme_ids": [],
+    "language": "en"
+  }
+]
